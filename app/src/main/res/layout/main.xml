@@ -1,11 +1,164 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center">
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tool="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:gravity="center"
+	android:padding="3dp"
+	tool:context="com.cdph.smsprank.MainActivity">
 
-    <TextView
-        android:text="@string/hello_world"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical">
+		
+		<android.support.v7.widget.CardView
+			style="@style/CardView.Dark"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="top"
+			android:layout_margin="5dp"
+			app:cardCornerRadius="4dp">
 
-</LinearLayout>
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal">
+
+				<Button
+					style="?android:attr/buttonBarButtonStyle"
+					android:id="@+id/btn_add"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:padding="6dp"
+					android:text="+"
+					android:textSize="20sp"
+					android:textStyle="bold"/>
+
+				<EditText
+					android:id="@+id/victim_number"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:hint="Victim's Number"
+					android:inputType="phone"
+					android:singleLine="true"/>
+
+			</LinearLayout>
+
+		</android.support.v7.widget.CardView>
+
+		<android.support.v7.widget.CardView
+			style="@style/CardView.Dark"
+			android:id="@+id/cardview_victim_list"
+			android:layout_width="match_parent"
+			android:layout_height="100dp"
+			android:layout_gravity="center"
+			android:layout_margin="5dp"
+			android:visibility="gone"
+			app:cardCornerRadius="4dp">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:orientation="vertical">	
+
+				<ListView
+					android:id="@+id/victim_list"
+					android:layout_weight="1"
+					android:layout_height="match_parent"
+					android:layout_width="match_parent"/>
+
+			</LinearLayout>
+
+		</android.support.v7.widget.CardView>
+
+		<android.support.v7.widget.CardView
+			style="@style/CardView.Dark"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_gravity="bottom"
+			android:layout_margin="5dp"
+			app:cardCornerRadius="4dp">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:orientation="vertical">
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_gravity="top|center"
+					android:gravity="center"
+					android:textStyle="bold"
+					android:textSize="18sp"
+					android:text="Commands"/>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:orientation="vertical"
+					android:padding="6dp">
+
+					<Button
+						android:id="@+id/btn_popup_img"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:padding="3dp"
+						android:text="Popup Scary Image"
+						android:textStyle="bold"/>
+
+					<Button
+						android:id="@+id/btn_sound_shout"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:padding="3dp"
+						android:text="Scary Scream"
+						android:textStyle="bold"/>
+
+					<Button
+						android:id="@+id/btn_jumpscare_1"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:padding="3dp"
+						android:text="Jumpscare (1)"
+						android:textStyle="bold"/>
+
+					<Button
+						android:id="@+id/btn_jumpscare_2"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:padding="3dp"
+						android:text="Jumpscare (2)"
+						android:textStyle="bold"/>
+
+					<Button
+						android:id="@+id/btn_sound_laugh"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:padding="3dp"
+						android:text="Scary Laugh"
+						android:textStyle="bold"/>
+
+					<Button
+						android:id="@+id/btn_special_prank"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:padding="3dp"
+						android:text="Scary Scream w/ Image"
+						android:textStyle="bold"/>
+
+				</LinearLayout>
+
+			</LinearLayout>
+
+		</android.support.v7.widget.CardView>
+		
+	</LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
+
